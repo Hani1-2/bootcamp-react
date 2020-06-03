@@ -31,10 +31,10 @@ jobs:
         # Yarn command
         cmd: install
     - name : installing surge
-      run: npm install --g surge
+      run : npm install --g surge
       
     - name : create build 
-      run: yarn build  
+      run : yarn build  
     
     - name : deploying on surge
       run : surge ./build http://newappsession.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
